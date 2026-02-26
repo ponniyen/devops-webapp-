@@ -1,25 +1,121 @@
-name: DevOps CI Pipeline
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-on:
-  push:
-    branches: [ main ]
+<title>Sampath Cloud Storage Platform</title>
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f4c81, #1e90ff);
+    color: white;
+    text-align: center;
+}
 
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
+header {
+    background-color: rgba(0,0,0,0.3);
+    padding: 20px;
+}
 
-      - name: Build Step
-        run: echo "Build completed successfully"
+h1 {
+    font-size: 36px;
+    margin: 10px;
+}
 
-      - name: Test Step
-        run: echo "Test completed successfully"
-      - name: Notify Slack
-        if: always()
-        run: |
-          curl -X POST -H 'Content-type: application/json' \
-          --data '{"text":"CI/CD Pipeline completed successfully"}' \
-          ${{ secrets.SLACK_WEBHOOK }}
+h2 {
+    color: #ffd700;
+}
+
+.container {
+    padding: 40px;
+}
+
+.card {
+    background-color: rgba(255,255,255,0.1);
+    margin: 20px auto;
+    padding: 20px;
+    width: 70%;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: rgba(0,0,0,0.4);
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Sampath Cloud Storage Platform</h1>
+<p>DevOps Automated Deployment using GitHub Actions and Netlify</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>Project Overview</h2>
+<p>
+This project demonstrates a complete DevOps pipeline implementation using:
+</p>
+
+<p>
+• GitHub for Version Control<br>
+• GitHub Actions for Continuous Integration<br>
+• Netlify for Continuous Deployment<br>
+• Slack for ChatOps Notifications<br>
+</p>
+</div>
+
+<div class="card">
+<h2>DevOps Features</h2>
+
+<p>
+✔ Automatic Build and Deployment<br>
+✔ Continuous Integration Pipeline<br>
+✔ Continuous Deployment Pipeline<br>
+✔ Real-time Slack Notifications<br>
+✔ Cloud-based Hosting<br>
+</p>
+
+</div>
+
+<div class="card">
+<h2>Cloud Services Used</h2>
+
+<p>
+Amazon Web Services (AWS):<br>
+• EC2 – Compute Instances<br>
+• S3 – Storage<br>
+• EBS – Block Storage<br>
+</p>
+
+</div>
+
+<div class="card">
+<h2>Status</h2>
+
+<p>
+DevOps Pipeline Status: ACTIVE<br>
+Deployment Status: SUCCESSFUL<br>
+Monitoring Status: ENABLED
+</p>
+
+</div>
+
+</div>
+
+<footer>
+<p>©️ 2026 Sampath | DevOps Virtual Lab Experiment</p>
+</footer>
+
+</body>
+</html>
