@@ -17,3 +17,9 @@ jobs:
 
       - name: Test Step
         run: echo "Test completed successfully"
+      - name: Notify Slack
+        if: always()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data '{"text":"CI/CD Pipeline completed successfully"}' \
+          ${{ secrets.SLACK_WEBHOOK }}
